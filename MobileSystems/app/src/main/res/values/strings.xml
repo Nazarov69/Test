@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MobileSystems</string>
+    <string name="clickButton">Нажми на меня</string>
+    <string name="nextToLab">Вторая лаба</string>
+    <string name="turnButton">Перевернуть</string>
+    <string name="rectangleText">Квадрат</string>
+    <string name="cancel">Отмена</string>
+    <string name="ok">Подтвердить</string>
+    <string name="clickReady">Готово</string>
+    <string name="input">Введите число</string>
+    <string name="notAdmitted">Отпущена</string>
+    <string name="admitted">Нажата</string>
+</resources>

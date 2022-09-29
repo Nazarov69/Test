@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/nniks/AndroidStudioProjects/MobileSystems/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.266" />
+        <entry key="..\:/Users/nniks/AndroidStudioProjects/MobileSystems/app/src/main/res/drawable-v24/separator.xml" value="0.2475" />
+        <entry key="..\:/Users/nniks/AndroidStudioProjects/MobileSystems/app/src/main/res/drawable/click.xml" value="0.1645" />
+        <entry key="..\:/Users/nniks/AndroidStudioProjects/MobileSystems/app/src/main/res/drawable/custom.xml" value="0.2405" />
+        <entry key="..\:/Users/nniks/AndroidStudioProjects/MobileSystems/app/src/main/res/drawable/ic_baseline_navigate_next_24.xml" value="0.2405" />
+        <entry key="..\:/Users/nniks/AndroidStudioProjects/MobileSystems/app/src/main/res/drawable/ic_click_background.xml" value="0.1835" />
+        <entry key="..\:/Users/nniks/AndroidStudioProjects/MobileSystems/app/src/main/res/drawable/ic_click_foreground.xml" value="0.1835" />
+        <entry key="..\:/Users/nniks/AndroidStudioProjects/MobileSystems/app/src/main/res/drawable/ic_launcher_background.xml" value="0.266" />
+        <entry key="..\:/Users/nniks/AndroidStudioProjects/MobileSystems/app/src/main/res/drawable/rect_black.xml" value="0.118" />
+        <entry key="..\:/Users/nniks/AndroidStudioProjects/MobileSystems/app/src/main/res/drawable/rect_blue.xml" value="0.2145" />
+        <entry key="..\:/Users/nniks/AndroidStudioProjects/MobileSystems/app/src/main/res/drawable/rect_green.xml" value="0.2145" />
+        <entry key="..\:/Users/nniks/AndroidStudioProjects/MobileSystems/app/src/main/res/drawable/rect_red.xml" value="0.2145" />
+        <entry key="..\:/Users/nniks/AndroidStudioProjects/MobileSystems/app/src/main/res/drawable/rectangle.xml" value="0.2475" />
+        <entry key="..\:/Users/nniks/AndroidStudioProjects/MobileSystems/app/src/main/res/drawable/rectangle2.xml" value="0.2475" />
+        <entry key="..\:/Users/nniks/AndroidStudioProjects/MobileSystems/app/src/main/res/drawable/rotate_clockwise.xml" value="0.1" />
+        <entry key="..\:/Users/nniks/AndroidStudioProjects/MobileSystems/app/src/main/res/drawable/stroke_cancel.xml" value="0.1835" />
+        <entry key="..\:/Users/nniks/AndroidStudioProjects/MobileSystems/app/src/main/res/drawable/stroke_ok.xml" value="0.1835" />
+        <entry key="..\:/Users/nniks/AndroidStudioProjects/MobileSystems/app/src/main/res/layout/activity_buttons.xml" value="0.33" />
+        <entry key="..\:/Users/nniks/AndroidStudioProjects/MobileSystems/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/nniks/AndroidStudioProjects/MobileSystems/app/src/main/res/layout/activity_squares.xml" value="0.26849894291754756" />
+        <entry key="..\:/Users/nniks/AndroidStudioProjects/MobileSystems/app/src/main/res/layout/rectangle.xml" value="0.13240740740740742" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
