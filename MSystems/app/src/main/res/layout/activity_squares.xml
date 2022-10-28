@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Lab3Squares"
+    android:background="@color/baclkgr">
+
+    <ImageView
+        android:id="@+id/idLogo"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:onClick="onClickLogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/idRed"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/red"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/idGreen"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/idRed"
+        app:layout_constraintTop_toTopOf="@+id/idRed"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/idBlue"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="50dp"
+        android:background="@color/blue"
+        app:layout_constraintStart_toEndOf="@+id/idRed"
+        app:layout_constraintTop_toTopOf="@+id/idRed"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/idRectangle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rectangleText"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@id/idBlue"
+        app:layout_constraintEnd_toEndOf="@+id/idBlue"
+        app:layout_constraintStart_toStartOf="@+id/idBlue"
+        app:layout_constraintTop_toTopOf="@id/idBlue"
+        tools:ignore="MissingConstraints"/>
+
+    <ImageView
+        android:id="@+id/idBlack"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/gray"
+        android:onClick="onClickBlack"
+        app:layout_constraintStart_toStartOf="@id/idCancel"
+        app:layout_constraintTop_toBottomOf="@+id/idRowAndCol"
+        app:layout_constraintEnd_toEndOf="@id/idCancel"
+        tools:ignore="MissingConstraints,OnClick,SpeakableTextPresentCheck" />
+
+    <LinearLayout
+        android:id="@+id/idRowAndCol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idGreen"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/red" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/pink" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:background="@color/green"></ImageView>
+
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/blue" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/black" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/idgrid"
+
+        android:layout_marginRight="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toTopOf="@+id/idRowAndCol"
+
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/red"
+            android:layout_marginLeft="5dp"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/green"
+            android:layout_marginLeft="5dp"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/blue"
+            android:layout_marginLeft="5dp"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/pink" />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/black" />
+
+    </GridLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/idCancel"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/stroke_cancel"
+        android:onClick="onClickCancel"
+        android:text="@string/cancel"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/idBlack"
+        tools:ignore="MissingConstraints,OnClick,TouchTargetSizeCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/idOk"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/stroke_ok"
+        android:onClick="onClickOk"
+        android:text="@string/ok"
+        android:textColor="@color/head"
+        android:textSize="12dp"
+        app:layout_constraintStart_toEndOf="@id/idCancel"
+        app:layout_constraintTop_toTopOf="@id/idCancel"
+        tools:ignore="OnClick" />
+
+    <EditText
+        android:id="@+id/idLeftAdd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@id/idCancel"
+        app:layout_constraintStart_toStartOf="@id/idCancel"
+        app:layout_constraintTop_toBottomOf="@id/idCancel"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/idRightAdd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@id/idOk"
+        app:layout_constraintStart_toStartOf="@id/idOk"
+        app:layout_constraintTop_toBottomOf="@id/idOk"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+    <TextView
+        android:id="@+id/idResult"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@id/idOk"
+        app:layout_constraintBottom_toBottomOf="@id/idRightAdd"
+        app:layout_constraintStart_toEndOf="@id/idOk"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/logo"
+        android:textSize="50dp"
+        android:gravity="center"/>
+
+    <ImageView
+        android:id="@+id/idBlack2"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:background="@color/gray"
+        android:onClick="onClickBlack2"
+        app:layout_constraintTop_toTopOf="@id/idBlack"
+        app:layout_constraintEnd_toEndOf="@id/idOk"
+        app:layout_constraintStart_toStartOf="@id/idOk"
+        tools:ignore="OnClick,SpeakableTextPresentCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/next"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/ic_baseline_navigate_next_24"
+        android:onClick="onClickNext"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/id_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="/"
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/prev"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/ic_baseline_navigate_before_24"
+        android:onClick="onClickPrev"
+        tools:ignore="MissingConstraints" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

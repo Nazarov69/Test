@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Lab2Click"
+    android:background="@color/baclkgr">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:onClick="onCLickZero"
+        android:text="Обнуление"
+        app:layout_constraintEnd_toStartOf="@+id/idClick"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/idClick"
+        android:background="@drawable/custom"
+        tools:ignore="MissingClass"
+        android:textColor="@color/white" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:onClick="onCLickMinus"
+        android:text="Вычесть"
+        app:layout_constraintStart_toEndOf="@+id/idClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/idClick"
+        android:background="@drawable/custom"
+        tools:ignore="MissingClass"
+        android:textColor="@color/white" />
+
+    <ImageView
+        android:id="@+id/idLogo"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:onClick="onClickLogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/idClick"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:onClick="onClickButton"
+        android:text="@string/clickButton"
+        app:layout_constraintEnd_toEndOf="@+id/idTextClicks"
+        app:layout_constraintStart_toStartOf="@+id/idTextClicks"
+        app:layout_constraintTop_toBottomOf="@+id/idTextClicks"
+        android:background="@drawable/custom"
+        tools:ignore="MissingClass"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/idTextClicks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:textColor="@color/logo"
+        android:textSize="70sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_baseline_navigate_next_24"
+        android:onClick="onClickNext"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+    <TextView
+        android:id="@+id/id_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="/"
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

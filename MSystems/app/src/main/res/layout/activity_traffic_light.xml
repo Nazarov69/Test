@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Lab7TrafficLight"
+    android:background="@color/baclkgr">
+
+    <ImageView
+        android:id="@+id/idLogo"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/logo"
+        android:onClick="onClickLogo"
+        android:contentDescription="@string/todo" />
+    <ImageView
+        android:id="@+id/idLight"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text"
+        android:src="@drawable/grey"
+        android:contentDescription="@string/todo" />
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent"
+        android:onClick="onClickStartStop"
+        android:scaleType="fitCenter"
+        android:src="@drawable/button_start"
+        app:layout_constraintEnd_toEndOf="@id/idLight"
+        app:layout_constraintStart_toStartOf="@id/idLight"
+        app:layout_constraintTop_toBottomOf="@+id/idLight"
+        android:contentDescription="@string/todo" />
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/Traffic"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:onClick="onClickText"
+        android:textColor="@color/logo"
+        tools:ignore="MissingConstraints"/>
+    <TextView
+        android:id="@+id/id_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/imageButton"
+        app:layout_constraintEnd_toEndOf="@id/imageButton"
+        app:layout_constraintTop_toBottomOf="@id/imageButton"
+        android:text="00:00:00"
+        android:textColor="@color/logo"
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints"/>
+    <ImageView
+        android:id="@+id/id_go"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_timer"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="10dp"
+        android:scaleX="-1"
+        android:scaleType="fitEnd"
+        tools:ignore="MissingConstraints"
+        android:src="@drawable/go"/>
+    <TextView
+        android:id="@+id/id_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="/"
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/prev"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/ic_baseline_navigate_before_24"
+        android:onClick="onClickPrev"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

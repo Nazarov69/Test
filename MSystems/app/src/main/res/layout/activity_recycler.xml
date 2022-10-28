@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Lab5Recycler"
+    android:background="@color/baclkgr">
+    <TextView
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Заметки"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#3FF6D7"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="6dp"
+        tools:ignore="MissingConstraints"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/id_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintBottom_toTopOf="@+id/add"
+        app:layout_constraintTop_toBottomOf="@id/head"
+        tools:ignore="MissingConstraints" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/add"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/dobavit"
+        android:onClick="onClickAdd"
+        tools:ignore="MissingConstraints"/>
+    <DatePicker
+        android:id="@+id/pickerDate"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:datePickerMode="spinner"
+        android:calendarViewShown="false"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@id/head"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/add"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/acc"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toEndOf="@id/pickerDate"
+        app:layout_constraintTop_toTopOf="@id/pickerDate"
+        app:layout_constraintBottom_toBottomOf="@id/pickerDate"
+        android:layout_marginStart="3dp"
+        android:visibility="gone"
+        android:background="@drawable/accept"
+        android:onClick="onClickAcc"
+        tools:ignore="MissingConstraints"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

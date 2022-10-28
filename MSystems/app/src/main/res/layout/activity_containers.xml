@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Lab5Containers"
+    android:background="@color/baclkgr">
+
+    <ImageView
+        android:id="@+id/idLogo"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/logo"
+        android:onClick="onClickLogo"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/next"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_baseline_navigate_next_24"
+        android:onClick="onClickNext"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/id_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="/"
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/prev"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_baseline_navigate_before_24"
+        android:onClick="onClickPrev"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/id_calendar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_baseline_date_range_24"
+        android:inputType="text"
+        android:onClick="onClickWrite"
+        app:layout_constraintEnd_toEndOf="@id/id_time"
+        app:layout_constraintTop_toBottomOf="@id/id_time"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+    <TextView
+        android:id="@+id/id_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/pers"
+        android:gravity="center"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/id_text"/>
+    <DatePicker
+        android:id="@+id/id_datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:datePickerMode="spinner"
+        android:calendarViewShown="false"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="120dp"
+        android:visibility="gone"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/id_time"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_baseline_access_time_24"
+        android:onClick="onClickTime"
+        app:layout_constraintEnd_toEndOf="@id/id_textPicker"
+        app:layout_constraintTop_toBottomOf="@id/id_textPicker"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <TimePicker
+        android:id="@+id/id_timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:timePickerMode="spinner"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/id_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintTop_toTopOf="@id/id_date"
+        app:layout_constraintEnd_toStartOf="@id/idLogo"
+        app:layout_constraintBottom_toTopOf="@id/id_text"
+        android:textSize="20sp"
+        android:textColor="@color/pers"
+        android:gravity="center"
+        tools:ignore="MissingConstraints"/>
+
+    <EditText
+        android:id="@+id/id_edit"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="150dp"
+        tools:ignore="MissingConstraints"
+        android:focusable="true"
+        android:inputType="text"
+        android:visibility="gone"
+        android:focusableInTouchMode="true"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/id_textPicker"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/ic_baseline_text_snippet_24"
+        android:onClick="onClickText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_text"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/id_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/head"
+        android:textSize="30sp"
+        android:layout_margin="5dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintEnd_toStartOf="@id/idLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_date"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="71dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/notebook"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/btn"
+        android:onClick="onClickStack"
+        app:layout_constraintBottom_toTopOf="@id/id_number"
+        app:layout_constraintEnd_toStartOf="@id/pager"
+        app:layout_constraintStart_toEndOf="@id/prev"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/pager"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toEndOf="@id/notebook"
+        app:layout_constraintEnd_toStartOf="@id/nbook"
+        app:layout_constraintTop_toTopOf="@id/notebook"
+        tools:ignore="MissingConstraints"
+        android:onClick="onClickPager"
+        android:background="@drawable/bt"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/nbook"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toEndOf="@id/pager"
+        app:layout_constraintEnd_toStartOf="@id/show"
+        app:layout_constraintTop_toTopOf="@id/notebook"
+        tools:ignore="MissingConstraints"
+        android:onClick="onClickNBook"
+        android:background="@drawable/btt"/>
+    <WebView
+        android:id="@+id/web"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_text"
+        app:layout_constraintBottom_toTopOf="@id/notebook"
+        app:layout_constraintEnd_toStartOf="@id/id_calendar"
+        android:visibility="invisible"
+        tools:ignore="MissingConstraints"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/youtube"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintTop_toBottomOf="@id/id_calendar"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/ic_baseline_video_library_24"
+        android:onClick="onClickYouTube"
+        tools:ignore="MissingConstraints"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintTop_toBottomOf="@id/youtube"
+        app:layout_constraintEnd_toEndOf="@id/youtube"
+        android:background="@drawable/ic_baseline_text_snippet_24"
+        android:onClick="onCLickSnippet"
+        tools:ignore="MissingConstraints"/>
+    <Spinner
+        android:id="@+id/id_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/id_textPicker"
+        app:layout_constraintTop_toTopOf="@id/id_textPicker"
+        android:layout_marginEnd="24dp"
+        android:visibility="gone"
+        tools:ignore="MissingConstraints" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/show"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintStart_toEndOf="@id/nbook"
+        app:layout_constraintEnd_toStartOf="@id/counter"
+        android:background="@drawable/bbt"
+        app:layout_constraintTop_toTopOf="@id/nbook"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/counter"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:ignore="MissingConstraints"
+        android:background="@drawable/bbbbt"
+        android:onClick="onClickCounter"
+        app:layout_constraintEnd_toStartOf="@id/next"
+        app:layout_constraintTop_toTopOf="@id/show"
+        app:layout_constraintStart_toEndOf="@id/show"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
