@@ -9,6 +9,6 @@ object Positions {
     var MARGIN = 10
     var SCALE = 0.5
     var REVERSE = 1
-    var ALL = 5
+    var ALL = 6
     var CURRENT = 1
 }

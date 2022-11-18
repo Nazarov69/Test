@@ -1,7 +1,11 @@
 package com.example.msystems
 
+import android.app.Notification
+import android.app.PendingIntent
+import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
@@ -13,11 +17,14 @@ import android.widget.*
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
+import com.example.msystems.App.Companion.CHANNEL_1_ID
 import com.example.msystems.databinding.ActivityContainersBinding
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import java.util.*
-import kotlin.Number
 
+var COUNT = 0
 class Lab5Containers : AppCompatActivity() {
     lateinit var binding: ActivityContainersBinding
     private var flag_date = true
@@ -27,6 +34,7 @@ class Lab5Containers : AppCompatActivity() {
     private var flag_spinner = true
     private lateinit var launcher : ActivityResultLauncher<Intent>
     val descriptions = mutableListOf<String>()
+    private lateinit var notificationManager : NotificationManagerCompat
     lateinit var imm: InputMethodManager
     var url = "https://www.google.com/"
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,7 +44,7 @@ class Lab5Containers : AppCompatActivity() {
         binding.idNumber.text = Positions.CURRENT.toString() + "/" + Positions.ALL.toString()
         imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
 
-
+        notificationManager = NotificationManagerCompat.from(this)
         for(i in 0 until elements.size) descriptions.add(elements[i].description)
 
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, descriptions)
@@ -80,6 +88,8 @@ class Lab5Containers : AppCompatActivity() {
                 Toast.makeText(this, result.data?.getStringExtra("key").toString(), Toast.LENGTH_SHORT).show()
             }
         }
+
+
     }
 
     override fun onBackPressed() {
@@ -88,7 +98,7 @@ class Lab5Containers : AppCompatActivity() {
     }
 
     fun onClickNext(view: View) {
-        startActivity(Intent(this@Lab5Containers, Lab7TrafficLight::class.java))
+        startActivity(Intent(this@Lab5Containers, Lab6Lists::class.java))
         Positions.CURRENT++
     }
 
@@ -265,4 +275,41 @@ class Lab5Containers : AppCompatActivity() {
         launcher?.launch(Intent(this@Lab5Containers, Counter::class.java))
     }
 
+    fun sendOnChannel1(view: View) {
+        val activityIntent = Intent(this, Lab5Containers::class.java)
+        val contentIntent = PendingIntent.getActivity(
+            this,
+            0, activityIntent, 0
+        )
+        val broadcastIntent = Intent(this, NotificationReceiver::class.java)
+
+        broadcastIntent.putExtra("toastMessage", COUNT)
+        val actionIntent = PendingIntent.getBroadcast(
+            this,
+            0, broadcastIntent, PendingIntent.FLAG_UPDATE_CURRENT
+        )
+        var notification: Notification = NotificationCompat.Builder(this, CHANNEL_1_ID)
+            .setSmallIcon(R.drawable.ic_android)
+            .setContentTitle("Notification")
+            .setContentText(COUNT.toString())
+            .setPriority(NotificationCompat.PRIORITY_HIGH)
+            .setCategory(NotificationCompat.CATEGORY_MESSAGE)
+            .setColor(Color.BLUE)
+            .setContentIntent(contentIntent)
+            .setAutoCancel(true)
+            .setOnlyAlertOnce(true)
+            .addAction(R.mipmap.ic_launcher, "PLUS", actionIntent)
+            .build()
+        notificationManager.notify(1, notification)
+    }
+
+    class A : BroadcastReceiver(){
+        override fun onReceive(context: Context, intent: Intent) {
+            val message = intent.getStringExtra("toastMessage")
+            COUNT++
+
+            Toast.makeText(context, COUNT.toString(), Toast.LENGTH_SHORT).show()
+        }
+    }
 }
+

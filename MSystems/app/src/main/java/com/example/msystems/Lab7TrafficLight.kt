@@ -3,30 +3,39 @@ package com.example.msystems
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MotionEvent
 import android.view.View
 import android.view.animation.AnimationUtils
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import android.widget.ImageButton
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.msystems.databinding.ActivityTrafficLightBinding
 import java.util.*
 
-class Lab7TrafficLight : AppCompatActivity() {
+class Lab7TrafficLight : AppCompatActivity(), TimerAdapter.Listener {
     lateinit var binding: ActivityTrafficLightBinding
     var iterator = -1
     lateinit var timer : Timer
     lateinit var t : Timer
     var isRun = false
+    private var layoutManager : RecyclerView.LayoutManager? = null
+    private val adapter = TimerAdapter(this)
     var imgList = listOf(R.drawable.red, R.drawable.yellow, R.drawable.green, R.drawable.yellow)
     private lateinit var launcher : ActivityResultLauncher<Intent>
     @SuppressLint("ClickableViewAccessibility", "ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityTrafficLightBinding.inflate(layoutInflater)
+        layoutManager = LinearLayoutManager(this)
+        binding.idRecyclerView.layoutManager = layoutManager
+        binding.idRecyclerView.adapter = adapter
         setContentView(binding.root)
         binding.idNumber.text = Positions.CURRENT.toString() + "/" + Positions.ALL.toString()
         binding.text.setOnTouchListener { view, event ->
@@ -50,8 +59,36 @@ class Lab7TrafficLight : AppCompatActivity() {
         launcher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
                 result ->
             if(result.resultCode == RESULT_OK){
-                Toast.makeText(this, result.data?.getStringExtra("key").toString(), Toast.LENGTH_SHORT).show()
+                binding.button.visibility = View.VISIBLE
+                binding.create.text = "Кнопка создана"
+                binding.idSpinner.visibility = View.VISIBLE
+                var color = result.data?.getStringExtra("key").toString()
+                when(color){
+                    "Изумрудный" -> binding.button.setBackgroundColor(Color.parseColor("#019980"))
+                    "Синий" -> binding.button.setBackgroundColor(Color.parseColor("#0F64A7"))
+                    "Сизый" -> binding.button.setBackgroundColor(Color.parseColor("#768CC0"))
+                    "Цвет" -> binding.button.setBackgroundColor(Color.parseColor("#FF595959"))
+                }
             }
+        }
+        val description = arrayOf("Описание 1", "Описание 2", "Описание 3")
+        val adapt = ArrayAdapter(this, android.R.layout.simple_spinner_item, description)
+        adapt.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        binding.idSpinner.adapter = adapt
+        binding.idSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                binding.button.text = when(p2){
+                    0 -> description[0]
+                    1 -> description[1]
+                    2 -> description[2]
+                    else -> {""}
+                }
+            }
+            override fun onNothingSelected(parent: AdapterView<*>) {}
+        }
+        val str = ArrayList<String>()
+        binding.addTime.setOnClickListener(){
+            adapter.add(0,binding.idTimer.text.toString())
         }
     }
 
@@ -120,7 +157,11 @@ class Lab7TrafficLight : AppCompatActivity() {
 
     fun onClickText(view: View) {}
     fun onClickPrev(view: View) {
-        startActivity(Intent(this@Lab7TrafficLight, Lab5Containers::class.java))
+        startActivity(Intent(this@Lab7TrafficLight, Lab6Lists::class.java))
         Positions.CURRENT--
+    }
+
+    fun onClickColors(view: View) {
+        launcher?.launch(Intent(this@Lab7TrafficLight, Colors::class.java))
     }
 }
