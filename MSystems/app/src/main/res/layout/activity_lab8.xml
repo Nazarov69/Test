@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/baclkgr"
+    tools:context=".Lab8">
+
+    <ImageView
+        android:id="@+id/idLogo"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:onClick="onClickLogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cancel"
+        android:layout_margin="12dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/delete"
+        android:onClick="onClickCancel"/>
+
+    <TextView
+        android:id="@+id/data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:text="0"
+        android:textColor="@color/head"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@id/cancel"
+        app:layout_constraintStart_toEndOf="@id/cancel"
+        app:layout_constraintTop_toTopOf="@id/cancel" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/add"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toEndOf="@id/data"
+        app:layout_constraintTop_toTopOf="@id/cancel"
+        android:background="@drawable/dobavit"
+        android:onClick="onClickAdd" />
+
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/data"
+        app:layout_constraintStart_toStartOf="@id/cancel"
+        app:layout_constraintEnd_toStartOf="@id/idLogo"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/id_recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:padding="6dp"
+        app:layout_constraintStart_toStartOf="@id/edit"
+        app:layout_constraintTop_toBottomOf="@id/edit"
+        app:layout_constraintEnd_toEndOf="@id/edit"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cancel2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="@id/add2"
+        app:layout_constraintTop_toBottomOf="@id/add2"
+        android:background="@drawable/delete"
+        android:onClick="onClickCancel2"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/add2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toEndOf="@id/id_recyclerView"
+        app:layout_constraintTop_toBottomOf="@id/idLogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/dobavit"
+        android:onClick="onClickAdd2" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toStartOf="@id/id_recyclerView"
+        app:layout_constraintEnd_toEndOf="@id/id_recyclerView"
+        android:textColor="@color/head"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/id_recyclerView"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

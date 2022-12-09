@@ -24,6 +24,7 @@ class Lab7TrafficLight : AppCompatActivity(), TimerAdapter.Listener {
     var iterator = -1
     lateinit var timer : Timer
     lateinit var t : Timer
+    lateinit var tim :Timer
     var isRun = false
     private var layoutManager : RecyclerView.LayoutManager? = null
     private val adapter = TimerAdapter(this)
@@ -139,10 +140,22 @@ class Lab7TrafficLight : AppCompatActivity(), TimerAdapter.Listener {
 
             view.setImageResource(R.drawable.button_stop)
             isRun = true
+            tim = Timer()
+            tim.schedule(object :TimerTask(){
+                override fun run() {
+                    binding.idLight.startAnimation(
+                        AnimationUtils.loadAnimation(
+                            this@Lab7TrafficLight,
+                            R.anim.light
+                        )
+                    )
+                }
+            },0,1000)
         }
         else{
             timer.cancel()
             t.cancel()
+            tim.cancel();
             view.setImageResource(R.drawable.button_start)
             binding.idLight.setImageResource(R.drawable.grey)
             isRun = false
@@ -153,9 +166,13 @@ class Lab7TrafficLight : AppCompatActivity(), TimerAdapter.Listener {
             binding.idTimer.text = "0$hour:0$minute:0$second"
 
         }
+
     }
 
-    fun onClickText(view: View) {}
+    fun onClickNext(view : View){
+        startActivity(Intent(this@Lab7TrafficLight, Lab8::class.java))
+        Positions.CURRENT++
+    }
     fun onClickPrev(view: View) {
         startActivity(Intent(this@Lab7TrafficLight, Lab6Lists::class.java))
         Positions.CURRENT--

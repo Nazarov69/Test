@@ -60,62 +60,6 @@ class Lab6Lists : AppCompatActivity(), ColorAdapter.Listener, DBAdapter.Listener
         }
         bln = binding.edit.visibility == View.GONE
         db = DBHelper(this)
-//
-//        val btn = findViewById<Button>(R.id.AddItem)
-//        val info = findViewById<TextView>(R.id.info)
-//
-//        val policy = ThreadPolicy.Builder().permitAll().build()
-//        StrictMode.setThreadPolicy(policy)
-//
-//        val url = URL("http://www.cbr.ru/scripts/XML_daily.asp")
-//        val client: HttpClient = HttpClient(.newBuilder().build())
-//        var result = ""
-//        var document: Document? = null
-//        try {
-//            val response: HttpResponse = client.execute(httpPost)
-//            val statusCode: Int = response.getStatusLine().getStatusCode()
-//            if (statusCode == 200) {
-//                val inputStream: InputStream = response.getEntity().getContent()
-//                val reader = BufferedReader(InputStreamReader(inputStream, "windows-1251"))
-//                var line: String
-//                while (reader.readLine().also { line = it } != null) {
-//                    result += line
-//                }
-//                result = result.substring(45)
-//                document = com.example.lab6.ExchangeRate.loadXMLFromString(result)
-//            }
-//        } catch (e: IOException) {
-//            e.printStackTrace()
-//        } catch (e: Exception) {
-//            e.printStackTrace()
-//        }
-//
-//        val nameList = document!!.getElementsByTagName("Name")
-//        val valueList = document!!.getElementsByTagName("Value")
-//        val Names: ArrayList<*> = ArrayList<String>()
-//        val Values: ArrayList<*> = ArrayList<String>()
-//
-//        for (i in 0 until nameList.length) {
-//            Names.add(nameList.item(i).textContent)
-//            Values.add(valueList.item(i).textContent)
-//        }
-////
-//        //
-//        val listView = findViewById<ListView>(R.id.listView)
-//        val adapter: com.example.lab6.ExchangeRate.ListAdapter =
-//            com.example.lab6.ExchangeRate.ListAdapter(
-//                this,
-//                R.layout.list_items_exchange_rate,
-//                Names,
-//                Values
-//            )
-//        listView.adapter = adapter
-//
-//        val bNext = findViewById<Button>(R.id.NextPage)
-//        bNext.setOnClickListener {
-//            val intent = Intent(this@ExchangeRate, NoteList::class.java)
-//            startActivity(intent)
-//        }
 
     }
 
@@ -202,5 +146,9 @@ class Lab6Lists : AppCompatActivity(), ColorAdapter.Listener, DBAdapter.Listener
     fun onClickPrev(view: View) {
         startActivity(Intent(this@Lab6Lists, Lab5Containers::class.java))
         Positions.CURRENT--
+    }
+
+    fun onClickNext2(view: View) {
+        startActivity(Intent(this@Lab6Lists, ExRate::class.java))
     }
 }

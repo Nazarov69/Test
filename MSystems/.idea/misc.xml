@@ -14,31 +14,39 @@
         <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/drawable/ic_baseline_video_library_24.xml" value="0.1" />
         <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/drawable/stroke_cancel.xml" value="0.1" />
         <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/drawable/stroke_ok.xml" value="0.1" />
-        <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/activity_buttons.xml" value="0.18" />
+        <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/activity_buttons.xml" value="0.22" />
         <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/activity_colors.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/activity_containers.xml" value="0.25" />
         <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/activity_counter.xml" value="0.3175925925925926" />
+        <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/activity_ex_rate.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/activity_ex_rate2.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/activity_lab2.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/activity_lab5_containers.xml" value="0.18697916666666667" />
         <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/activity_lab5_recycler.xml" value="0.18697916666666667" />
         <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/activity_lab6_lists.xml" value="0.36102564102564105" />
         <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/activity_lab7_traffic_light.xml" value="0.18697916666666667" />
-        <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/activity_main.xml" value="0.18697916666666667" />
+        <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/activity_lab8.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/activity_lab9.xml" value="0.1" />
+        <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/activity_nbook.xml" value="0.18697916666666667" />
         <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/activity_num.xml" value="0.1" />
         <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/activity_number.xml" value="0.1" />
         <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/activity_page_stack.xml" value="0.1" />
         <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/activity_pager.xml" value="0.1" />
+        <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/activity_particles.xml" value="0.18385416666666668" />
+        <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/activity_particles2.xml" value="0.18385416666666668" />
+        <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/activity_rate.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/activity_recycler.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/activity_squares.xml" value="0.1" />
+        <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/activity_squares.xml" value="0.25" />
         <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/activity_traffic_light.xml" value="0.33" />
         <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/bottomsheet_fragment.xml" value="0.25" />
         <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/colors.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/db_elem.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/db_elem.xml" value="0.16137566137566137" />
         <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/fragment_n_book.xml" value="0.1" />
         <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/fragment_nubmer.xml" value="0.1" />
         <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/fragment_num.xml" value="0.1" />
         <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/fragment_number.xml" value="0.1" />
-        <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/rate.xml" value="0.365625" />
+        <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/rate.xml" value="0.33" />
         <entry key="..\:/Users/nniks/AndroidStudioProjects/MSystems/app/src/main/res/layout/row.xml" value="0.33" />
       </map>
     </option>
