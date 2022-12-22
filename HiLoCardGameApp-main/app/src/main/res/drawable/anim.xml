@@ -1,0 +1,9 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/ace_of_diamonds" android:duration="200"/>
+    <item android:drawable="@drawable/ace_of_hearts" android:duration="200"/>
+    <item android:drawable="@drawable/ace_of_clubs" android:duration="200"/>
+    <item android:drawable="@drawable/ace_of_spades" android:duration="200"/>
+
+
+
+</animation-list>

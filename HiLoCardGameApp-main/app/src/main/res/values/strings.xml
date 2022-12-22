@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">HiLoCardGameApp</string>
+    <string name="welcome_to_hi_lo"><![CDATA[WELCOME TO HI&LO]]></string>
+    <string name="START">START</string>
+    <string name="PAUSE">PAUSE</string>
+    <string name="logo">Logo</string>
+    <string name="hilologo">TODO</string>
+    <string name="h">H</string>
+    <string name="l">L</string>
+    <string name="todo">TODO</string>
+    <string name="number">number</string>
+    <string name="H">HIGH</string>
+    <string name="L">LOW</string>
+    <string name="ScoreStreak">Score streak</string>
+    <string name="Todo">TODO</string>
+    <string name="TODO">TODO</string>
+    <string name="todo1">TODO</string>
+    <string name="todo2">TODO</string>
+    <string name="todo12">TODO</string>
+    <string name="how_do_i_play_this_game">How do I play this game?</string>
+    <string name="todo3">TODO</string>
+    <string name="gameRules">Rules are simple. A card will appear on the screen, simply guess if you think the next card after that will be a higher card or a lower card, if you guess right you will then earn a point in the streak. If not then the streak will either reset to 0 depending on how many points you had or it will remain at 0 streak. The more right you have the more points you will earn!</string>
+    <string name="rules">RULES</string>
+    <string name="have_fun">Have fun!</string>
+    <string name="todo4">TODO</string>
+    <string name="Player">Name</string>
+    <string name="HighScore">Score</string>
+    <string name="startGameButton">START</string>
+    <string name="highest_score_10">Highest Score: 10</string>
+    <string name="bestScore">Best Score</string>
+    <string name="currentScore">Current Score</string>
+    <string name="RESUME">RESUME</string>
+    <string name="EXIT">EXIT</string>
+    <string name="PAUSED">PAUSED</string>
+</resources>

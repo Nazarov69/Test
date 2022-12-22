@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_700"
+    tools:context=".GameActivity">
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/higherButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/MilitaryGreen"
+        android:fontFamily="monospace"
+        android:text="@string/H"
+        android:textColor="@color/WhiteGrey"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@id/arrowUpDown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/arrowUpDown"
+        app:layout_constraintTop_toTopOf="@id/arrowUpDown" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/lowerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/Red"
+        android:fontFamily="monospace"
+        android:text="@string/L"
+        android:textColor="@color/WhiteGrey"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@id/arrowUpDown"
+        app:layout_constraintEnd_toStartOf="@id/arrowUpDown"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/arrowUpDown" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/pointsButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40sp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/DarkGrey"
+        android:contentDescription="@string/app_name"
+        android:fontFamily="monospace"
+        android:text="@string/PAUSE"
+        android:textColor="@color/WhiteGrey"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/arrowUpDown"
+        app:layout_constraintStart_toStartOf="@id/arrowUpDown" />
+
+
+    <RelativeLayout
+        android:id="@+id/cardBackSide"
+        android:layout_width="250dp"
+        android:layout_height="363dp"
+        android:layout_margin="40dp"
+        android:contentDescription="@string/TODO"
+        app:layout_constraintBottom_toTopOf="@+id/highScoreText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/sprite_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ace_of_diamonds" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/arrowUpDown"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toTopOf="@+id/pointsButton"
+        app:layout_constraintEnd_toStartOf="@+id/lowerButton"
+        app:layout_constraintStart_toEndOf="@+id/higherButton"
+        app:srcCompat="@drawable/arrowupdown"
+        android:layout_marginBottom="35dp"/>
+
+
+    <TextView
+        android:id="@+id/highScoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="@string/ScoreStreak"
+        android:textColor="@color/DarkGrey"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/scoreStreak"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/scoreStreak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/DarkGrey"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/arrowUpDown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
